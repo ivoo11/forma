@@ -1,267 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- META -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOЯMA | Próximamente</title>
 
-    <!-- TITLE -->
-    <title>FOЯMA | Diseño + Comunicación</title>
-    <meta name="description" content="Plataforma editorial sobre comunicación, branding, cultura, digital, medios y política.">
-
-    <!-- FAVICON -->
     <link rel="icon" href="assets/img/favicon2.png">
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden;
+            background: #050505;
+            color: #fff;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            user-select: none;
+        }
+
+        .construction {
+            position: relative;
+            min-height: 100vh;
+            padding: 56px 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+            background: #050505;
+        }
+
+        .construction-bg {
+            position: absolute;
+            width: min(1200px, 180vw);
+            opacity: .045;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .construction-bg img {
+            width: 100%;
+            display: block;
+        }
+
+        .construction-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 980px;
+
+            animation: enter .9s ease forwards;
+        }
+
+        .construction-logo {
+            width: clamp(150px, 18vw, 250px);
+            margin-bottom: 70px;
+        }
+
+        .construction-title {
+            font-family: "Anton", sans-serif;
+            font-size: clamp(4.4rem, 12vw, 11rem);
+            line-height: .86;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            margin-bottom: 42px;
+        }
+
+        .construction-title span {
+            display: block;
+        }
+
+        .construction-text {
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            line-height: 1.45;
+            font-weight: 700;
+            color: rgba(255,255,255,.74);
+            margin-bottom: 18px;
+        }
+
+        .construction-tagline {
+            font-size: clamp(.95rem, 1.5vw, 1.1rem);
+            line-height: 1.5;
+            font-weight: 400;
+            color: rgba(255,255,255,.52);
+            margin-bottom: 34px;
+        }
+
+        .construction-soon {
+            display: inline-block;
+            font-size: .85rem;
+            font-weight: 900;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: #6a66ff;
+        }
+
+        .construction-title span:last-child::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: .8em;
+            background: #6a66ff;
+            margin-left: 12px;
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes enter {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .construction {
+                padding: 42px 22px;
+                align-items: center;
+            }
+
+            .construction-logo {
+                width: 150px;
+                margin-bottom: 58px;
+            }
+
+            .construction-title {
+                font-size: clamp(4rem, 21vw, 6rem);
+                margin-bottom: 36px;
+            }
+
+            .construction-text {
+                font-size: 1.05rem;
+            }
+
+            .construction-tagline {
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="site-header">
+    <main class="construction">
 
-        <div class="header-bg-logo" aria-hidden="true">
-            <img src="assets/img/logo.png" alt="">
+        <div class="construction-bg" aria-hidden="true">
+            <img src="assets/img/logo2.png" alt="">
         </div>
 
-        <div class="container">
+        <section class="construction-content">
+            <img src="assets/img/logo2.png" alt="FOЯMA" class="construction-logo">
 
-            <nav class="main-nav">
+            <h1 class="construction-title">
+                <span>LAS IDEAS</span>
+                <span>NECESITAN</span>
+                <span>ESPACIO.</span>
+            </h1>
 
-                <div class="nav-group">
+            <p class="construction-text">
+                Estamos construyendo uno.
+            </p>
 
-                    <a href="index.html" class="nav-logo">
-                        <img src="assets/img/logo2.png" alt="FOЯMA">
-                    </a>
+            <p class="construction-tagline">
+                Diseño, comunicación, medios y cultura digital.
+            </p>
 
-                    <ul class="nav-menu">
-                        <li><a href="categoria.html?category=branding">Branding</a></li>
-                        <li><a href="#">Cultura</a></li>
-                        <li><a href="#">Digital</a></li>
-                        <li><a href="#">Medios</a></li>
-                        <li><a href="#">Política</a></li>
-                    </ul>
-
-                </div>
-
-            </nav>
-
-            <div class="hero-brand">
-                <img src="assets/img/logo2.png" alt="FOЯMA">
-            </div>
-
-            <div class="hero-accent"></div>
-
-        </div>
-
-    </header>
-
-    <!-- MAIN -->
-    <main class="site-main">
-
-        <section class="focus-section">
-
-            <div class="editorial-container">
-
-                <header class="section-heading">
-                    <h2>En Foco</h2>
-                    <span></span>
-                </header>
-
-                <div class="focus-carousel" aria-label="Notas en foco">
-
-                    <button class="carousel-btn carousel-btn-prev" type="button" aria-label="Anterior">‹</button>
-
-                    <div class="focus-track">
-
-                        <a href="articulo.html" class="article-card">
-                            <img src="assets/img/card-1.jpg" alt="">
-                            <div class="article-card-content">
-                                <span class="article-kicker">Política</span>
-                                <h3>La estética del poder en la era de los discursos virales</h3>
-                                <time>Hace 2 horas</time>
-                            </div>
-                        </a>
-
-                        <a href="articulo.html" class="article-card">
-                            <img src="assets/img/card-2.jpg" alt="">
-                            <div class="article-card-content">
-                                <span class="article-kicker">Branding</span>
-                                <h3>Cómo las marcas construyen confianza visual</h3>
-                                <time>Hace 4 horas</time>
-                            </div>
-                        </a>
-
-                        <a href="articulo.html" class="article-card">
-                            <img src="assets/img/card-3.jpg" alt="">
-                            <div class="article-card-content">
-                                <span class="article-kicker">Digital</span>
-                                <h3>La inteligencia artificial como nuevo lenguaje cultural</h3>
-                                <time>Hace 6 horas</time>
-                            </div>
-                        </a>
-
-                        <a href="articulo.html" class="article-card">
-                            <img src="assets/img/card-4.jpg" alt="">
-                            <div class="article-card-content">
-                                <span class="article-kicker">Medios</span>
-                                <h3>El streaming y la transformación de la opinión pública</h3>
-                                <time>Hace 1 día</time>
-                            </div>
-                        </a>
-
-                        <a href="articulo.html" class="article-card">
-                            <img src="assets/img/card-5.jpg" alt="">
-                            <div class="article-card-content">
-                                <span class="article-kicker">Cultura</span>
-                                <h3>La ciudad como escenario de nuevas narrativas visuales</h3>
-                                <time>Hace 1 día</time>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <button class="carousel-btn carousel-btn-next" type="button" aria-label="Siguiente">›</button>
-
-                </div>
-
-                <div class="section-dots desktop-dots" aria-label="Indicadores del carrusel">
-                    <button class="active" type="button" aria-label="Ir al slide 1"></button>
-                    <button type="button" aria-label="Ir al slide 2"></button>
-                    <button type="button" aria-label="Ir al slide 3"></button>
-                </div>
-
-                <div class="section-dots tablet-dots">
-                    <button class="active"></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </div>
-
-                <div class="section-dots mobile-dots">
-                    <button class="active"></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="voices-section">
-
-            <div class="editorial-container">
-
-                <header class="section-heading">
-                    <h2>Nuevas Voces</h2>
-                    <span></span>
-                </header>
-
-                <div class="voices-grid">
-
-                    <a href="voz.html" class="voice-card">
-                        <img src="assets/img/voice-1.jpg" alt="Juan Pérez">
-                        <h3>Juan Pérez</h3>
-                        <p>Comunicación Política · UNLaM</p>
-                        <span>La comunicación política en tiempos de algoritmos</span>
-                    </a>
-
-                    <a href="#" class="voice-card">
-                        <img src="assets/img/voice-2.jpg" alt="María Gómez">
-                        <h3>María Gómez</h3>
-                        <p>Diseño UX · UBA</p>
-                        <span>Diseñar para usuarios o para métricas</span>
-                    </a>
-
-                    <a href="#" class="voice-card">
-                        <img src="assets/img/voice-3.jpg" alt="Lucía Torres">
-                        <h3>Lucía Torres</h3>
-                        <p>Periodismo Digital · UNLaM</p>
-                        <span>La noticia como experiencia visual</span>
-                    </a>
-
-                    <a href="#" class="voice-card">
-                        <img src="assets/img/voice-4.jpg" alt="Tomás Bianchi">
-                        <h3>Tomás Bianchi</h3>
-                        <p>Branding Cultural · UNDAV</p>
-                        <span>Las marcas también construyen ciudadanía</span>
-                    </a>
-
-                </div>
-
-                <div class="voices-more">
-                    <a href="nuevasvoces.html">Ver todas las voces →</a>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="question-section">
-            <div class="question-bg"></div>
-            <div class="editorial-container">
-                <span class="question-label">LA PREGUNTA</span>
-                <h2 class="question-title">
-                    ¿La política se volvió una cuestión estética?
-                </h2>
-                <p class="question-text">
-                    Una pregunta. Varias miradas. Un mismo tema atravesado desde la comunicación,
-                    el diseño, los medios, la academia y las nuevas voces.
-                </p>
-                <a href="pregunta.html" class="question-link">
-                    Explorar perspectivas →
-                </a>
-            </div>
+            <span class="construction-soon">
+                Próximamente
+            </span>
         </section>
 
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-inner">
-
-            <div class="footer-left">
-                <img src="assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
-
-                <nav class="footer-links">
-                    <a href="contacto.html">Contacto</a>
-                    <a href="archivo.html">Archivo</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="acercade.html">Acerca de FOЯMA</a>
-                    <a href="accesibilidad.html">Accesibilidad</a>
-                    <a href="terminos.html">Términos y Condiciones</a>
-                </nav>
-
-                <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>
-            </div>
-
-            <div class="footer-social">
-                <a href="#" aria-label="X">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="#" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="js/main.js"></script>
 
 </body>
 </html>

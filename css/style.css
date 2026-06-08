@@ -666,7 +666,7 @@ body {
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0;
     margin-bottom: 34px;
     max-width: 300px;
@@ -677,6 +677,7 @@ body {
     font-size: 13px;
     font-weight: 800;
     color: #fff;
+    white-space: nowrap;
 }
 
 .footer-links a:not(:last-child)::after {
@@ -3428,6 +3429,7 @@ body {
     .footer-links {
         justify-content: center;
         margin-bottom: 24px;
+        flex-wrap: wrap;
     }
 
     .footer-left p {
