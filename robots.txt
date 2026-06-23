@@ -5,3 +5,5 @@ Allow: /
 Disallow: /admin/
 
 Sitemap: https://somosforma.com.ar/sitemap.xml
+
+/* ROBOTS */
