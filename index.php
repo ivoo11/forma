@@ -160,11 +160,11 @@ $activeQuestion = $activeQuestionStmt->fetch();
                     </a>
 
                     <ul class="nav-menu">
-                        <li><a href="categoria.html?category=branding">Branding</a></li>
-                        <li><a href="categoria.html?category=cultura"">Cultura</a></li>
-                        <li><a href="categoria.html?category=digital"">Digital</a></li>
-                        <li><a href="categoria.html?category=medios">Medios</a></li>
-                        <li><a href="categoria.html?category=politica">Política</a></li>
+                        <li><a href="categoria.php?cat=branding">Branding</a></li>
+                        <li><a href="categoria.php?cat=cultura">Cultura</a></li>
+                        <li><a href="categoria.php?cat=digital">Digital</a></li>
+                        <li><a href="categoria.php?cat=medios">Medios</a></li>
+                        <li><a href="categoria.php?cat=politica">Política</a></li>
                     </ul>
 
                 </div>
