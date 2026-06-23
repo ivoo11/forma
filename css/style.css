@@ -3046,12 +3046,6 @@ body {
     .nav-menu a {
         transition: none;
     }
-
-    .nav-menu a:hover,
-    .article-header .nav-menu a:hover,
-    .category-header .nav-menu a:hover {
-        color: inherit;
-    }
     
     .article-card:hover h3::after {
         height: 0;
@@ -3285,12 +3279,6 @@ body {
 
     .nav-menu a {
         transition: none;
-    }
-
-    .nav-menu a:hover,
-    .article-header .nav-menu a:hover,
-    .category-header .nav-menu a:hover {
-        color: inherit;
     }
 
     .article-card:hover h3::after {
