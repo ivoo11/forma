@@ -2,5 +2,5 @@
 # FORMA - Custom Error Pages
 # ==========================================
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 

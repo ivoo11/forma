@@ -1,0 +1,85 @@
+<?php
+http_response_code(404);
+
+$pageTitle = 'Página no encontrada';
+$pageDescription = 'La página que buscás no existe o fue movida dentro de FOЯMA.';
+$baseUrl = 'https://somosforma.com.ar';
+$currentUrl = $baseUrl . '/404.php';
+$pageImage = $baseUrl . '/assets/img/og.jpg';
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMEQ5Z3K2S"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HMEQ5Z3K2S');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><?= htmlspecialchars($pageTitle) ?> | FOЯMA</title>
+
+    <meta name="robots" content="noindex, follow">
+
+    <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
+
+    <meta property="og:site_name" content="FOЯMA">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($pageImage) ?>">
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png?v=20260609" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg?v=20260609">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico?v=20260609">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png?v=20260609">
+    <meta name="apple-mobile-web-app-title" content="Forma">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest?v=20260609">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="error-hero">
+
+    <div class="header-bg-wordmark" aria-hidden="true">
+        <img src="assets/img/logo2.png" alt="">
+    </div>
+
+    <div class="error-content">
+
+        <span class="error-code">404</span>
+
+        <h1>
+            No todo está<br>
+            publicado.
+        </h1>
+
+        <p>
+            Lo que buscás no pudo encontrarse.<br>
+            Pero las conversaciones siguen abiertas.
+        </p>
+
+        <div class="error-links">
+            <a href="index.php">→ Volver al inicio</a>
+            <a href="archivo.php">→ Explorar el archivo</a>
+        </div>
+
+    </div>
+
+</header>
+
+</body>
+</html>
