@@ -173,7 +173,7 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
 <header class="category-header">
 
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="container">
@@ -182,7 +182,7 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
             <div class="nav-group">
 
                 <a href="index.php" class="nav-logo">
-                    <img src="assets/img/logo2.png" alt="FORMA">
+                    <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
@@ -329,16 +329,16 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
     <div class="footer-inner">
 
         <div class="footer-left">
-            <img src="assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
+            <img src="/assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
-            <nav class="footer-links">
-                <a href="#">Contacto</a>
-                <a href="archivo.php">Archivo</a>
-                <a href="#">Acerca de nosotros</a>
-                <a href="#">FAQ</a>
-                <a href="#">Accesibilidad</a>
-                <a href="#">Términos y Condiciones</a>
-            </nav>
+                <nav class="footer-links">
+                    <a href="contacto.php">Contacto</a>
+                    <a href="archivo.php">Archivo</a>
+                    <a href="acercade.php">Acerca de FOЯMA</a>
+                    <a href="faq.php">FAQ</a>
+                    <a href="accesibilidad.php">Accesibilidad</a>
+                    <a href="terminos.php">Términos y Condiciones</a>
+                </nav>
 
             <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>
         </div>

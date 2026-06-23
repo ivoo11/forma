@@ -55,7 +55,7 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
 <header class="error-hero">
 
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="error-content">

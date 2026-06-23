@@ -155,7 +155,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
     <header class="site-header">
 
         <div class="header-bg-logo" aria-hidden="true">
-            <img src="assets/img/logo.png" alt="">
+            <img src="/assets/img/logo.png" alt="">
         </div>
 
         <div class="container">
@@ -165,7 +165,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 <div class="nav-group">
 
                     <a href="index.php" class="nav-logo">
-                        <img src="assets/img/logo2.png" alt="FOЯMA">
+                        <img src="/assets/img/logo2.png" alt="FOЯMA">
                     </a>
 
                     <ul class="nav-menu">
@@ -181,7 +181,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
             </nav>
 
             <div class="hero-brand">
-                <img src="assets/img/logo2.png" alt="FOЯMA">
+                <img src="/assets/img/logo2.png" alt="FOЯMA">
             </div>
 
             <div class="hero-accent"></div>
@@ -362,15 +362,15 @@ $activeQuestion = $activeQuestionStmt->fetch();
         <div class="footer-inner">
 
             <div class="footer-left">
-                <img src="assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
+                <img src="/assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
                 <nav class="footer-links">
-                    <a href="contacto.html">Contacto</a>
+                    <a href="contacto.php">Contacto</a>
                     <a href="archivo.php">Archivo</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="acercade.html">Acerca de FOЯMA</a>
-                    <a href="accesibilidad.html">Accesibilidad</a>
-                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="acercade.php">Acerca de FOЯMA</a>
+                    <a href="faq.php">FAQ</a>
+                    <a href="accesibilidad.php">Accesibilidad</a>
+                    <a href="terminos.php">Términos y Condiciones</a>
                 </nav>
 
                 <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>
