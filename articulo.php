@@ -5,7 +5,7 @@ $slug = $_GET['slug'] ?? '';
 
 if ($slug === '') {
     http_response_code(404);
-    include '404.html';
+    include '404.php';
     exit;
 }
 
@@ -37,7 +37,7 @@ $article = $stmt->fetch();
 
 if (!$article) {
     http_response_code(404);
-    include '404.html';
+    include '404.php';
     exit;
 }
 
@@ -152,7 +152,7 @@ if (!$pageDescription) {
 $pageImage = $article['og_image'] ?: ($isVoiceArticle ? $article['foto'] : $article['imagen_portada']);
 
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/articulo.php?slug=' . urlencode($article['slug']);
+$currentUrl = $baseUrl . '/articulo/' . urlencode($article['slug']);
 
 $shareTitle = urlencode($article['titulo']);
 $shareUrl = urlencode($currentUrl);
@@ -263,16 +263,16 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
         <nav class="main-nav">
             <div class="nav-group">
 
-                <a href="index.php" class="nav-logo">
+                <a href="/" class="nav-logo">
                     <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
-                    <li><a href="categoria.php?cat=branding">Branding</a></li>
-                    <li><a href="categoria.php?cat=cultura">Cultura</a></li>
-                    <li><a href="categoria.php?cat=digital">Digital</a></li>
-                    <li><a href="categoria.php?cat=medios">Medios</a></li>
-                    <li><a href="categoria.php?cat=politica">Política</a></li>
+                    <li><a href="/branding">Branding</a></li>
+                    <li><a href="/cultura">Cultura</a></li>
+                    <li><a href="/digital">Digital</a></li>
+                    <li><a href="/medios">Medios</a></li>
+                    <li><a href="/politica">Política</a></li>
                 </ul>
 
             </div>
@@ -397,17 +397,20 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
             <?php if ($isVoiceArticle && !empty($article['foto'])): ?>
 
                 <figure class="voice-cover">
-                    <img src="<?= htmlspecialchars($article['foto']) ?>" alt="">
+                    <img src="/<?= htmlspecialchars(ltrim($article['foto'], '/')) ?>" alt="">
                 </figure>
 
             <?php elseif (!$isVoiceArticle && !empty($article['imagen_portada'])): ?>
 
             <figure class="article-cover">
                 <img
-                    src="<?= htmlspecialchars(
-                        !empty($article['imagen_portada'])
-                            ? $article['imagen_portada']
-                            : 'assets/img/default-article.png'
+                    src="/<?= htmlspecialchars(
+                        ltrim(
+                            !empty($article['imagen_portada'])
+                                ? $article['imagen_portada']
+                                : 'assets/img/default-article.png',
+                            '/'
+                        )
                     ) ?>"
                     alt=""
                 >
@@ -441,10 +444,13 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
 
                     <?php if (!empty($article['foto'])): ?>
                         <img
-                            src="<?= htmlspecialchars(
-                                !empty($article['foto'])
-                                    ? $article['foto']
-                                    : 'assets/img/default-avatar.png'
+                            src="/<?= htmlspecialchars(
+                                ltrim(
+                                    !empty($article['foto'])
+                                        ? $article['foto']
+                                        : 'assets/img/default-avatar.png',
+                                    '/'
+                                )
                             ) ?>"
                             alt=""
                         >
