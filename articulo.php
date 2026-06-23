@@ -325,16 +325,16 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
         <nav class="main-nav">
             <div class="nav-group">
 
-                <a href="index.php" class="nav-logo">
+                <a href="/" class="nav-logo">
                     <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
-                    <li><a href="categoria.php?cat=branding">Branding</a></li>
-                    <li><a href="categoria.php?cat=cultura">Cultura</a></li>
-                    <li><a href="categoria.php?cat=digital">Digital</a></li>
-                    <li><a href="categoria.php?cat=medios">Medios</a></li>
-                    <li><a href="categoria.php?cat=politica">Política</a></li>
+                    <li><a href="/branding">Branding</a></li>
+                    <li><a href="/cultura">Cultura</a></li>
+                    <li><a href="/digital">Digital</a></li>
+                    <li><a href="/medios">Medios</a></li>
+                    <li><a href="/politica">Política</a></li>
                 </ul>
 
             </div>
