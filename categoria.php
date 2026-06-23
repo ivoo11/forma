@@ -295,6 +295,8 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
                 <span></span>
             </header>
 
+        <?php if (!empty($sections['trama'])): ?>
+
             <div class="category-trama-grid">
 
                 <?php foreach ($sections['trama'] as $article): ?>
@@ -313,13 +315,22 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
 
             </div>
 
+        <?php else: ?>
+
+            <div class="empty-editorial-state">
+                <h3>La trama todavía se está escribiendo.</h3>
+                <p>Próximamente se incorporarán nuevas publicaciones.</p>
+            </div>
+
+        <?php endif; ?>
+
             <div class="empty-editorial-state">
                 <h3>La trama todavía se está escribiendo.</h3>
                 <p>Próximamente se incorporarán nuevas publicaciones.</p>
             </div>
 
             <div class="category-more">
-                <a href="archivo.php?cat=<?= htmlspecialchars($category['slug']) ?>">
+                <a href="/archivo">
                     Ver más artículos →
                 </a>
             </div>
