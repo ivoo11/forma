@@ -324,11 +324,6 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
 
         <?php endif; ?>
 
-            <div class="empty-editorial-state">
-                <h3>La trama todavía se está escribiendo.</h3>
-                <p>Próximamente se incorporarán nuevas publicaciones.</p>
-            </div>
-
             <div class="category-more">
                 <a href="/archivo">
                     Ver más artículos →
