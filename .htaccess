@@ -1,6 +1,41 @@
 # ==========================================
+# FORMA - URLS AMIGABLES
+# ==========================================
+
+RewriteEngine On
+
+# Evitar que se reescriban archivos o carpetas reales
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Sitemap
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Artículos
+RewriteRule ^articulo/([^/]+)/?$ articulo.php?slug=$1 [L,QSA]
+
+# La Pregunta
+RewriteRule ^pregunta/([^/]+)/?$ pregunta.php?slug=$1 [L,QSA]
+
+# Páginas fijas
+RewriteRule ^archivo/?$ archivo.php [L,QSA]
+RewriteRule ^nuevas-voces/?$ nuevasvoces.php [L,QSA]
+RewriteRule ^acerca/?$ acercade.php [L,QSA]
+RewriteRule ^contacto/?$ contacto.php [L,QSA]
+RewriteRule ^faq/?$ faq.php [L,QSA]
+RewriteRule ^accesibilidad/?$ accesibilidad.php [L,QSA]
+RewriteRule ^terminos/?$ terminos.php [L,QSA]
+
+# Categorías
+RewriteRule ^branding/?$ categoria.php?cat=branding [L,QSA]
+RewriteRule ^cultura/?$ categoria.php?cat=cultura [L,QSA]
+RewriteRule ^digital/?$ categoria.php?cat=digital [L,QSA]
+RewriteRule ^medios/?$ categoria.php?cat=medios [L,QSA]
+RewriteRule ^politica/?$ categoria.php?cat=politica [L,QSA]
+
+# ==========================================
 # FORMA - Custom Error Pages
 # ==========================================
 
 ErrorDocument 404 /404.php
-
