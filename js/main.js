@@ -2,17 +2,22 @@
 const logo = document.querySelector(".nav-logo img");
 
 if (logo && window.matchMedia("(hover: hover)").matches) {
+    const originalLogo = logo.getAttribute("src");
+
     const isDarkHover =
         document.querySelector(".article-header") ||
         document.querySelector(".category-header");
+
     const hoverLogo = isDarkHover
         ? "/assets/img/logo222.png"
         : "/assets/img/logo22.png";
+
     logo.addEventListener("mouseenter", () => {
         logo.src = hoverLogo;
     });
+
     logo.addEventListener("mouseleave", () => {
-        logo.src = "/assets/img/logo2.png";
+        logo.src = originalLogo;
     });
 }
 
