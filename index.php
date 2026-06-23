@@ -285,13 +285,18 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 <?php if (!empty($homeVoices)): ?>
                     <?php foreach ($homeVoices as $voice): ?>
                         <a
-                            href="/articulo/<?= urlencode($article['slug']) ?>"
+                            href="/articulo/<?= urlencode($voice['slug']) ?>"
                             class="voice-card"
                         >
                             <img
-                                src="<?= !empty($voice['foto'])
-                                    ? htmlspecialchars($voice['foto'])
-                                    : 'assets/img/default-author.jpg' ?>"
+                                src="/<?= htmlspecialchars(
+                                    ltrim(
+                                        !empty($voice['foto'])
+                                            ? $voice['foto']
+                                            : 'assets/img/default-avatar.png',
+                                        '/'
+                                    )
+                                ) ?>"
                                 alt=""
                             >
                             <h3>
