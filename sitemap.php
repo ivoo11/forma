@@ -21,31 +21,31 @@ function xmlUrl($url)
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/archivo.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/archivo') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/nuevasvoces.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/nuevas-voces') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/acercade.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/acerca') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/contacto.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/contacto') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/faq.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/faq') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/accesibilidad.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/accesibilidad') ?></loc>
     </url>
 
     <url>
-        <loc><?= xmlUrl($baseUrl . '/terminos.php') ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/terminos') ?></loc>
     </url>
 
 <?php
@@ -59,7 +59,7 @@ $categories = $pdo->query("
 foreach ($categories as $category):
 ?>
     <url>
-        <loc><?= xmlUrl($baseUrl . '/categoria.php?cat=' . $category['slug']) ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/' . $category['slug']) ?></loc>
     </url>
 
 <?php endforeach; ?>
@@ -93,7 +93,7 @@ $questions = $pdo->query("
 foreach ($questions as $question):
 ?>
     <url>
-        <loc><?= xmlUrl($baseUrl . '/pregunta.php?slug=' . $question['slug']) ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/pregunta/' . $question['slug']) ?></loc>
         <?php if (!empty($question['fecha_publicacion'])): ?>
             <lastmod><?= date('Y-m-d', strtotime($question['fecha_publicacion'])) ?></lastmod>
         <?php endif; ?>
