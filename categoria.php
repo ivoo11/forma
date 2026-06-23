@@ -87,7 +87,7 @@ function buildCategorySections($articles) {
 }
 
 function articleUrl($article) {
-    return 'articulo.php?slug=' . urlencode($article['slug']);
+    return '/articulo/' . urlencode($article['slug']);
 }
 
 function articleImage($article) {

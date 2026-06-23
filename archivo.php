@@ -127,14 +127,14 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
 
 <header class="archive-hero">
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="container">
         <nav class="main-nav">
             <div class="nav-group">
                 <a href="index.php" class="nav-logo">
-                    <img src="assets/img/logo2.png" alt="FORMA">
+                    <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
@@ -219,7 +219,7 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
                     ?>
 
                     <a 
-                        href="articulo.php?slug=<?= urlencode($article['slug']) ?>" 
+                        href="/articulo/<?= urlencode($article['slug']) ?>" 
                         class="archive-card <?= $isVoice ? 'archive-card-voice' : '' ?>"
                         data-category="<?= htmlspecialchars($article['category_slug']) ?>"
                         data-search="<?= htmlspecialchars($searchText) ?>"

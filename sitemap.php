@@ -75,7 +75,7 @@ $articles = $pdo->query("
 foreach ($articles as $article):
 ?>
     <url>
-        <loc><?= xmlUrl($baseUrl . '/articulo.php?slug=' . $article['slug']) ?></loc>
+        <loc><?= xmlUrl($baseUrl . '/articulo/' . $article['slug']) ?></loc>
         <?php if (!empty($article['fecha_publicacion'])): ?>
             <lastmod><?= date('Y-m-d', strtotime($article['fecha_publicacion'])) ?></lastmod>
         <?php endif; ?>

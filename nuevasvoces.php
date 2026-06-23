@@ -34,7 +34,7 @@ function voiceImage($voice) {
 }
 
 function articleUrl($voice) {
-    return 'articulo.php?slug=' . urlencode($voice['slug']);
+    return '/articulo/' . urlencode($article['slug']);
 }
 ?>
 
@@ -107,14 +107,14 @@ function articleUrl($voice) {
 
 <header class="voices-page-hero">
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="container">
         <nav class="main-nav">
             <div class="nav-group">
                 <a href="index.php" class="nav-logo">
-                    <img src="assets/img/logo2.png" alt="FORMA">
+                    <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
@@ -211,7 +211,7 @@ function articleUrl($voice) {
 <footer class="site-footer">
     <div class="footer-inner">
         <div class="footer-left">
-            <img src="assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
+            <img src="/assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
             <nav class="footer-links">
                 <a href="#">Contacto</a>

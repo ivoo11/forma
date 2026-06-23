@@ -210,7 +210,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 <?php if (!empty($focusArticles)): ?>
                     <?php foreach ($focusArticles as $article): ?>
                         <a
-                            href="articulo.php?slug=<?= urlencode($article['slug']) ?>"
+                            href="/articulo/<?= urlencode($article['slug']) ?>"
                             class="article-card"
                         >
                             <img
@@ -285,7 +285,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 <?php if (!empty($homeVoices)): ?>
                     <?php foreach ($homeVoices as $voice): ?>
                         <a
-                            href="articulo.php?slug=<?= urlencode($voice['slug']) ?>"
+                            href="/articulo/<?= urlencode($article['slug']) ?>"
                             class="voice-card"
                         >
                             <img
