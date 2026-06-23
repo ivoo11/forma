@@ -154,6 +154,22 @@ $pageImage = $article['og_image'] ?: ($isVoiceArticle ? $article['foto'] : $arti
 $baseUrl = 'https://somosforma.com.ar';
 $currentUrl = $baseUrl . '/articulo/' . urlencode($article['slug']);
 
+function mediaImage($path, $type = 'articles') {
+    if (empty($path)) {
+        return '/assets/img/default-article.png';
+    }
+
+    if (str_starts_with($path, 'http')) {
+        return $path;
+    }
+
+    if (str_starts_with($path, 'uploads/' . $type . '/')) {
+        return '/media.php?type=' . $type . '&file=' . urlencode(basename($path));
+    }
+
+    return '/' . ltrim($path, '/');
+}
+
 $shareTitle = urlencode($article['titulo']);
 $shareUrl = urlencode($currentUrl);
 
@@ -397,21 +413,14 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
             <?php if ($isVoiceArticle && !empty($article['foto'])): ?>
 
                 <figure class="voice-cover">
-                    <img src="/<?= htmlspecialchars(ltrim($article['foto'], '/')) ?>" alt="">
+                    <img src="<?= htmlspecialchars(mediaImage($article['foto'], 'authors')) ?>" alt="">
                 </figure>
 
             <?php elseif (!$isVoiceArticle && !empty($article['imagen_portada'])): ?>
 
             <figure class="article-cover">
                 <img
-                    src="/<?= htmlspecialchars(
-                        ltrim(
-                            !empty($article['imagen_portada'])
-                                ? $article['imagen_portada']
-                                : 'assets/img/default-article.png',
-                            '/'
-                        )
-                    ) ?>"
+                    src="<?= htmlspecialchars(mediaImage($article['imagen_portada'], 'articles')) ?>"
                     alt=""
                 >
             </figure>
@@ -444,14 +453,7 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
 
                     <?php if (!empty($article['foto'])): ?>
                         <img
-                            src="/<?= htmlspecialchars(
-                                ltrim(
-                                    !empty($article['foto'])
-                                        ? $article['foto']
-                                        : 'assets/img/default-avatar.png',
-                                    '/'
-                                )
-                            ) ?>"
+                            src="<?= htmlspecialchars(mediaImage($article['foto'] ?: 'assets/img/default-avatar.png', 'authors')) ?>"
                             alt=""
                         >
                     <?php endif; ?>
@@ -519,11 +521,11 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
 
                 <?php if ($isVoiceArticle): ?>
 
-                    <a href="nuevasvoces.php">Conocé más voces →</a>
+                    <a href="/nuevas-voces">Conocé más voces →</a>
 
                 <?php else: ?>
 
-                    <a href="categoria.php?cat=<?= htmlspecialchars($article['category_slug']) ?>">
+                    <a href="/<?= htmlspecialchars($article['category_slug']) ?>">
                         Más artículos de <?= htmlspecialchars($article['category_nombre']) ?> →
                     </a>
 

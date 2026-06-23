@@ -95,6 +95,10 @@ function articleImage($article) {
         ? $article['imagen_portada']
         : 'assets/img/default-article.png';
 
+    if (str_starts_with($image, 'uploads/articles/')) {
+        return '/media.php?type=articles&file=' . urlencode(basename($image));
+    }
+
     return '/' . ltrim($image, '/');
 }
 
