@@ -822,7 +822,7 @@ body {
 
 .category-hero-title h1 {
     font-family: "Anton", sans-serif;
-    font-size: clamp(6rem, 17vw, 10rem);
+    font-size: clamp(6rem, 17vw, 9rem);
     line-height: .82;
     font-weight: 400;
     color: #fff;
