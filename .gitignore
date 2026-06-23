@@ -1,2 +1,5 @@
-/uploads/*
-!/uploads/.gitkeep
+/uploads/articles/*
+!/uploads/articles/.gitkeep
+
+/uploads/authors/*
+!/uploads/authors/.gitkeep
