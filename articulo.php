@@ -255,7 +255,7 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
 <header class="voice-article-hero">
 
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="container">
@@ -317,7 +317,7 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
 <header class="article-header">
 
     <div class="header-bg-wordmark" aria-hidden="true">
-        <img src="assets/img/logo2.png" alt="">
+        <img src="/assets/img/logo2.png" alt="">
     </div>
 
     <div class="container">
@@ -326,7 +326,7 @@ if ($pageImage && !str_starts_with($pageImage, 'http')) {
             <div class="nav-group">
 
                 <a href="index.php" class="nav-logo">
-                    <img src="assets/img/logo2.png" alt="FORMA">
+                    <img src="/assets/img/logo2.png" alt="FORMA">
                 </a>
 
                 <ul class="nav-menu">
