@@ -3,6 +3,23 @@
 require_once __DIR__ . '/config/database.php';
 require_once __DIR__ . '/includes/editorial.php';
 
+function mediaImage($path, $type = 'articles') {
+
+    if (empty($path)) {
+        return '/assets/img/default-article.png';
+    }
+
+    if (str_starts_with($path, 'http')) {
+        return $path;
+    }
+
+    if (str_starts_with($path, 'uploads/' . $type . '/')) {
+        return '/media.php?type=' . $type . '&file=' . urlencode(basename($path));
+    }
+
+    return '/' . ltrim($path, '/');
+}
+
 $pageTitle = 'FOЯMA | Diseño + Comunicación';
 $pageDescription = 'Plataforma editorial sobre comunicación, branding, cultura, digital, medios y política.';
 
@@ -214,9 +231,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                             class="article-card"
                         >
                             <img
-                                src="<?= !empty($article['imagen_portada'])
-                                    ? htmlspecialchars($article['imagen_portada'])
-                                    : 'assets/img/default-article.png' ?>"
+                                src="<?= htmlspecialchars(mediaImage($article['imagen_portada'], 'articles')) ?>"
                                 alt=""
                             >
                             <div class="article-card-content">
@@ -289,14 +304,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                             class="voice-card"
                         >
                             <img
-                                src="/<?= htmlspecialchars(
-                                    ltrim(
-                                        !empty($voice['foto'])
-                                            ? $voice['foto']
-                                            : 'assets/img/default-avatar.png',
-                                        '/'
-                                    )
-                                ) ?>"
+                                src="<?= htmlspecialchars(mediaImage($voice['foto'], 'authors')) ?>"
                                 alt=""
                             >
                             <h3>
@@ -354,7 +362,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                     </p>
                 <?php endif; ?>
 
-                <a href="pregunta.php?slug=<?= urlencode($activeQuestion['slug']) ?>" class="question-link">
+                <a href="/pregunta/<?= urlencode($activeQuestion['slug']) ?>" class="question-link">
                     Explorar perspectivas →
                 </a>
             </div>
