@@ -28,6 +28,26 @@ function xmlUrl($url)
         <loc><?= xmlUrl($baseUrl . '/nuevasvoces.php') ?></loc>
     </url>
 
+    <url>
+        <loc><?= xmlUrl($baseUrl . '/acercade.php') ?></loc>
+    </url>
+
+    <url>
+        <loc><?= xmlUrl($baseUrl . '/contacto.php') ?></loc>
+    </url>
+
+    <url>
+        <loc><?= xmlUrl($baseUrl . '/faq.php') ?></loc>
+    </url>
+
+    <url>
+        <loc><?= xmlUrl($baseUrl . '/accesibilidad.php') ?></loc>
+    </url>
+
+    <url>
+        <loc><?= xmlUrl($baseUrl . '/terminos.php') ?></loc>
+    </url>
+
 <?php
 $categories = $pdo->query("
     SELECT slug

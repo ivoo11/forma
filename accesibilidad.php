@@ -1,20 +1,57 @@
+<?php
+$pageTitle = 'Accesibilidad';
+$pageDescription = 'Compromiso de FOЯMA con la accesibilidad, la inclusión digital y una experiencia de lectura abierta para todas las personas.';
+$baseUrl = 'https://somosforma.com.ar';
+$currentUrl = $baseUrl . '/accesibilidad.php';
+$pageImage = $baseUrl . '/assets/img/og.jpg';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accesibilidad | FOЯMA</title>
+    <title><?= htmlspecialchars($pageTitle) ?> | FOЯMA</title>
+
+    <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($currentUrl) ?>">
+
+    <meta property="og:site_name" content="FOЯMA">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?> | FOЯMA">
+    <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($pageImage) ?>">
+    <meta property="og:url" content="<?= htmlspecialchars($currentUrl) ?>">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?> | FOЯMA">
+    <meta name="twitter:description" content="<?= htmlspecialchars($pageDescription) ?>">
+    <meta name="twitter:image" content="<?= htmlspecialchars($pageImage) ?>">
+
+    <script type="application/ld+json">
+    <?= json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        'name' => $pageTitle . ' | FOЯMA',
+        'description' => $pageDescription,
+        'url' => $currentUrl,
+        'image' => $pageImage,
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => 'FOЯMA',
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => $baseUrl . '/assets/img/logo2.png'
+            ]
+        ]
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+    </script>
 
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png?v=20260609" sizes="96x96">
-
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg?v=20260609">
-
     <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico?v=20260609">
-
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png?v=20260609">
-
     <meta name="apple-mobile-web-app-title" content="Forma">
-
     <link rel="manifest" href="/assets/img/favicon/site.webmanifest?v=20260609">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -38,16 +75,16 @@
         <nav class="main-nav">
             <div class="nav-group">
 
-                <a href="index.html" class="nav-logo">
+                <a href="index.php" class="nav-logo">
                     <img src="assets/img/logo2.png" alt="FOЯMA">
                 </a>
 
                 <ul class="nav-menu">
-                    <li><a href="categoria.html">Branding</a></li>
-                    <li><a href="categoria.html">Cultura</a></li>
-                    <li><a href="categoria.html">Digital</a></li>
-                    <li><a href="categoria.html">Medios</a></li>
-                    <li><a href="categoria.html">Política</a></li>
+                    <li><a href="categoria.php?cat=branding">Branding</a></li>
+                    <li><a href="categoria.php?cat=cultura">Cultura</a></li>
+                    <li><a href="categoria.php?cat=digital">Digital</a></li>
+                    <li><a href="categoria.php?cat=medios">Medios</a></li>
+                    <li><a href="categoria.php?cat=politica">Política</a></li>
                 </ul>
 
             </div>
@@ -122,12 +159,12 @@
             <img src="assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
             <nav class="footer-links">
-                <a href="contacto.html">Contacto</a>
-                <a href="archivo.html">Archivo</a>
-                <a href="acerca.html">Acerca de nosotros</a>
-                <a href="faq.html">FAQ</a>
-                <a href="accesibilidad.html">Accesibilidad</a>
-                <a href="#">Términos y Condiciones</a>
+                <a href="contacto.php">Contacto</a>
+                <a href="archivo.php">Archivo</a>
+                <a href="acercade.php">Acerca de FOЯMA</a>
+                <a href="faq.php">FAQ</a>
+                <a href="accesibilidad.php">Accesibilidad</a>
+                <a href="terminos.php">Términos y Condiciones</a>
             </nav>
 
             <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>
