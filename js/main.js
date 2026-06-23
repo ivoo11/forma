@@ -6,13 +6,13 @@ if (logo && window.matchMedia("(hover: hover)").matches) {
         document.querySelector(".article-header") ||
         document.querySelector(".category-header");
     const hoverLogo = isDarkHover
-        ? "assets/img/logo222.png"
-        : "assets/img/logo22.png";
+        ? "/assets/img/logo222.png"
+        : "/assets/img/logo22.png";
     logo.addEventListener("mouseenter", () => {
         logo.src = hoverLogo;
     });
     logo.addEventListener("mouseleave", () => {
-        logo.src = "assets/img/logo2.png";
+        logo.src = "/assets/img/logo2.png";
     });
 }
 
