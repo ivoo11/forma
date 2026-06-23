@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </button>
 
                 <a
-                    href="index.php"
+                    href="/"
                     class="admin-btn"
                     style="background:#333; margin-left:10px;"
                 >

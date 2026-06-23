@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     Editar respuestas
                 </a>
 
-                <a href="index.php" class="admin-btn" style="background:#333; margin-left:10px;">
+                <a href="/" class="admin-btn" style="background:#333; margin-left:10px;">
                     Cancelar
                 </a>
 

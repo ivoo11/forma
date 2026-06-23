@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <button type="submit">Guardar autor</button>
 
-                <a href="index.php" class="admin-btn" style="background:#333; margin-left:10px;">
+                <a href="/" class="admin-btn" style="background:#333; margin-left:10px;">
                     Cancelar
                 </a>
 

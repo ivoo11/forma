@@ -135,7 +135,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                             Nueva pregunta
                         </a>
 
-                        <a href="archivo.php" class="dashboard-action-card" target="_blank">
+                        <a href="/archivo" class="dashboard-action-card" target="_blank">
                             <span>↗</span>
                             Archivo público
                         </a>

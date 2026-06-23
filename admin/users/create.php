@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </p>
                 </div>
 
-                <a href="index.php" class="admin-btn">Volver a usuarios</a>
+                <a href="/" class="admin-btn">Volver a usuarios</a>
                 <a href="create.php" class="admin-btn" style="background:#333; margin-left:10px;">Crear otro</a>
 
             <?php else: ?>
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <button type="submit">Crear usuario</button>
 
-                    <a href="index.php" class="admin-btn" style="background:#333; margin-left:10px;">
+                    <a href="/" class="admin-btn" style="background:#333; margin-left:10px;">
                         Cancelar
                     </a>
 

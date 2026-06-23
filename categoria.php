@@ -336,12 +336,12 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
             <img src="/assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
                 <nav class="footer-links">
-                    <a href="contacto.php">Contacto</a>
-                    <a href="archivo.php">Archivo</a>
-                    <a href="acercade.php">Acerca de FOЯMA</a>
-                    <a href="faq.php">FAQ</a>
-                    <a href="accesibilidad.php">Accesibilidad</a>
-                    <a href="terminos.php">Términos y Condiciones</a>
+                    <a href="/contacto">Contacto</a>
+                    <a href="/archivo">Archivo</a>
+                    <a href="/acerca">Acerca de FOЯMA</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/accesibilidad">Accesibilidad</a>
+                    <a href="/terminos">Términos y Condiciones</a>
                 </nav>
 
             <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>

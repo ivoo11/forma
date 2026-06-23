@@ -73,8 +73,8 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
         </p>
 
         <div class="error-links">
-            <a href="index.php">→ Volver al inicio</a>
-            <a href="archivo.php">→ Explorar el archivo</a>
+            <a href="/">→ Volver al inicio</a>
+            <a href="/archivo">→ Explorar el archivo</a>
         </div>
 
     </div>

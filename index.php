@@ -164,16 +164,16 @@ $activeQuestion = $activeQuestionStmt->fetch();
 
                 <div class="nav-group">
 
-                    <a href="index.php" class="nav-logo">
+                    <a href="/" class="nav-logo">
                         <img src="/assets/img/logo2.png" alt="FOЯMA">
                     </a>
 
                     <ul class="nav-menu">
-                        <li><a href="categoria.php?cat=branding">Branding</a></li>
-                        <li><a href="categoria.php?cat=cultura">Cultura</a></li>
-                        <li><a href="categoria.php?cat=digital">Digital</a></li>
-                        <li><a href="categoria.php?cat=medios">Medios</a></li>
-                        <li><a href="categoria.php?cat=politica">Política</a></li>
+                        <li><a href="/branding">Branding</a></li>
+                        <li><a href="/cultura">Cultura</a></li>
+                        <li><a href="/digital">Digital</a></li>
+                        <li><a href="/medios">Medios</a></li>
+                        <li><a href="/politica">Política</a></li>
                     </ul>
 
                 </div>
@@ -331,7 +331,7 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 </div>
 
                 <div class="voices-more">
-                    <a href="nuevasvoces.php">Ver todas las voces →</a>
+                    <a href="/nuevas-voces">Ver todas las voces →</a>
                 </div>
 
             </div>
@@ -370,12 +370,12 @@ $activeQuestion = $activeQuestionStmt->fetch();
                 <img src="/assets/img/logo2.png" alt="FOЯMA" class="footer-logo">
 
                 <nav class="footer-links">
-                    <a href="contacto.php">Contacto</a>
-                    <a href="archivo.php">Archivo</a>
-                    <a href="acercade.php">Acerca de FOЯMA</a>
-                    <a href="faq.php">FAQ</a>
-                    <a href="accesibilidad.php">Accesibilidad</a>
-                    <a href="terminos.php">Términos y Condiciones</a>
+                    <a href="/contacto">Contacto</a>
+                    <a href="/archivo">Archivo</a>
+                    <a href="/acerca">Acerca de FOЯMA</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/accesibilidad">Accesibilidad</a>
+                    <a href="/terminos">Términos y Condiciones</a>
                 </nav>
 
                 <p>2026 SOMOSFOЯMA. Todos los derechos reservados</p>

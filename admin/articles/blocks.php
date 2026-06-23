@@ -221,7 +221,7 @@ $blocks = $blocksStmt->fetchAll();
                     Publicar ahora
                 </button>
 
-                <a href="index.php" class="admin-btn" style="background:#333;">
+                <a href="/" class="admin-btn" style="background:#333;">
                     Volver
                 </a>
             </form>
