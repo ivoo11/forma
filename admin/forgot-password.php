@@ -1,8 +1,9 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../config/mail.php';
 
 $error = '';
-$successLink = '';
+$success = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -24,16 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$user) {
 
-        $error = 'No existe un usuario activo con ese email.';
+        $success = true;
 
     } else {
 
         $token = bin2hex(random_bytes(32));
-
-        $expires = date(
-            'Y-m-d H:i:s',
-            strtotime('+1 hour')
-        );
+        $expires = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
         $update = $pdo->prepare("
             UPDATE users
@@ -49,9 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'id' => $user['id']
         ]);
 
-        $successLink =
-            'reset-password.php?token=' .
-            $token;
+        $resetUrl = 'https://somosforma.com.ar/admin/reset-password.php?token=' . $token;
+
+        $mailSent = sendPasswordResetEmail(
+            $user['email'],
+            $user['nombre'],
+            $resetUrl
+        );
+
+        if ($mailSent) {
+            $success = true;
+        } else {
+            $error = 'No pudimos enviar el email de recuperación. Intentá nuevamente más tarde.';
+        }
     }
 }
 ?>
@@ -60,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Recuperar contraseña</title>
+    <title>Recuperar contraseña | FORMA CMS</title>
     <link rel="stylesheet" href="assets/admin.css">
 </head>
 
@@ -76,19 +83,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </p>
     <?php endif; ?>
 
-    <?php if ($successLink): ?>
+    <?php if ($success): ?>
 
         <div class="admin-success">
-
             <p>
-                Link generado:
+                Si existe una cuenta activa con ese email, enviamos un enlace para restablecer la contraseña.
             </p>
-
-            <a href="<?= htmlspecialchars($successLink) ?>">
-                <?= htmlspecialchars($successLink) ?>
-            </a>
-
         </div>
+
+        <p style="margin-top:20px;">
+            <a href="login.php">Volver al login</a>
+        </p>
 
     <?php else: ?>
 
@@ -98,14 +103,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 type="email"
                 name="email"
                 placeholder="Tu email"
+                autocomplete="email"
                 required
             >
 
             <button type="submit">
-                Generar enlace
+                Enviar enlace
             </button>
 
         </form>
+
+        <p style="margin-top:20px;">
+            <a href="login.php">Volver al login</a>
+        </p>
 
     <?php endif; ?>
 

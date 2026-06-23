@@ -16,7 +16,7 @@ if ($isLocal) {
     $host = 'localhost';
     $dbname = 'u736192581_forma';
     $user = 'u736192581_ivanmontano87';
-    $pass = 'Sanmontano2020';
+    $pass = 'Sanmontano2020$';
 }
 
 try {
