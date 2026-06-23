@@ -44,7 +44,7 @@ $answers = $answersStmt->fetchAll();
 $pageTitle = $question['pregunta'];
 $pageDescription = $question['bajada'] ?: 'Una pregunta. Distintas formas.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/pregunta.php?slug=' . urlencode($question['slug']);
+$currentUrl = $baseUrl . '/pregunta/' . urlencode($question['slug']);
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

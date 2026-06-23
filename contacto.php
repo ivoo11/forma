@@ -2,7 +2,7 @@
 $pageTitle = 'Contacto';
 $pageDescription = 'Ponete en contacto con FOЯMA. Propuestas editoriales, Nuevas Voces, investigaciones y conversaciones.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/contacto.php';
+$currentUrl = $baseUrl . '/contacto';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

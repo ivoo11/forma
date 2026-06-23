@@ -103,7 +103,7 @@ $sections = buildCategorySections($articles);
 $pageTitle = $category['nombre'];
 $pageDescription = $category['descripcion'] ?: 'Una mirada de FORMA sobre diseño, comunicación, medios y cultura digital.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/categoria.php?cat=' . urlencode($category['slug']);
+$currentUrl = $baseUrl . '/' . urlencode($category['slug']);
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

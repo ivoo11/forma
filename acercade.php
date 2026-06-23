@@ -2,7 +2,7 @@
 $pageTitle = 'Acerca de FORMA';
 $pageDescription = 'FORMA es una plataforma editorial independiente sobre comunicación, diseño, medios, cultura digital y política.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/acercade.php';
+$currentUrl = $baseUrl . '/acerca';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

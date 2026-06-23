@@ -2,7 +2,7 @@
 $pageTitle = 'Accesibilidad';
 $pageDescription = 'Compromiso de FOЯMA con la accesibilidad, la inclusión digital y una experiencia de lectura abierta para todas las personas.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/accesibilidad.php';
+$currentUrl = $baseUrl . '/accesibilidad';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

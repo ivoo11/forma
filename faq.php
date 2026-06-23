@@ -2,7 +2,7 @@
 $pageTitle = 'FAQ';
 $pageDescription = 'Preguntas frecuentes sobre FOЯMA, su propuesta editorial, Nuevas Voces, La Pregunta y formas de participación.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/faq.php';
+$currentUrl = $baseUrl . '/faq';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

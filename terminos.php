@@ -2,7 +2,7 @@
 $pageTitle = 'Términos y Condiciones';
 $pageDescription = 'Términos y condiciones de uso de FOЯMA y lineamientos para la utilización de contenidos publicados en la plataforma.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/terminos.php';
+$currentUrl = $baseUrl . '/terminos';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 ?>
 

@@ -26,7 +26,7 @@ $voices = $stmt->fetchAll();
 $pageTitle = 'Nuevas Voces';
 $pageDescription = 'Miradas emergentes para pensar la comunicación contemporánea.';
 $baseUrl = 'https://somosforma.com.ar';
-$currentUrl = $baseUrl . '/nuevasvoces.php';
+$currentUrl = $baseUrl . '/nuevas-voces';
 $pageImage = $baseUrl . '/assets/img/og.jpg';
 
 function voiceImage($voice) {
