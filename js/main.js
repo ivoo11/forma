@@ -1,50 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const focusTrack = document.querySelector(".focus-track");
-    const prevBtn = document.querySelector(".carousel-btn-prev");
-    const nextBtn = document.querySelector(".carousel-btn-next");
-    const dots = document.querySelectorAll(".focus-dots button");
-
-    if (!focusTrack || !prevBtn || !nextBtn) return;
-
-    const maxIndex = dots.length - 1;
-    let currentIndex = 0;
-
-    const getStep = () => {
-        const card = focusTrack.querySelector(".article-card");
-        const gap = parseFloat(getComputedStyle(focusTrack).gap) || 44;
-        return card.offsetWidth + gap;
-    };
-
-    const goToSlide = (index) => {
-        if (index > maxIndex) currentIndex = 0;
-        else if (index < 0) currentIndex = maxIndex;
-        else currentIndex = index;
-
-        focusTrack.scrollTo({
-            left: getStep() * currentIndex,
-            behavior: "smooth"
-        });
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === currentIndex);
-        });
-    };
-
-    nextBtn.addEventListener("click", () => {
-        goToSlide(currentIndex + 1);
-    });
-
-    prevBtn.addEventListener("click", () => {
-        goToSlide(currentIndex - 1);
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-            goToSlide(index);
-        });
-    });
-});
-
 /* LOGO HOVER EFFECT */
 const logo = document.querySelector(".nav-logo img");
 
@@ -170,7 +123,16 @@ if (focusTrack && focusCards.length && focusDots.length) {
     let currentFocusIndex = 0;
 
     const goToFocusCard = (index) => {
-        currentFocusIndex = Math.max(0, Math.min(index, focusCards.length - 1));
+
+        const maxSlides = focusDots.length;
+
+        if (index >= maxSlides) {
+            currentFocusIndex = 0;
+        } else if (index < 0) {
+            currentFocusIndex = maxSlides - 1;
+        } else {
+            currentFocusIndex = index;
+        }
 
         focusCards[currentFocusIndex].scrollIntoView({
             behavior: "smooth",
@@ -180,9 +142,7 @@ if (focusTrack && focusCards.length && focusDots.length) {
 
         focusDots.forEach(dot => dot.classList.remove("active"));
 
-        if (focusDots[currentFocusIndex]) {
-            focusDots[currentFocusIndex].classList.add("active");
-        }
+        focusDots[currentFocusIndex]?.classList.add("active");
     };
 
     focusDots.forEach((dot, index) => {
@@ -208,7 +168,7 @@ if (focusTrack && focusCards.length && focusDots.length) {
         const cardWidth = focusCards[0].offsetWidth + gap;
         const index = Math.round(focusTrack.scrollLeft / cardWidth);
 
-        currentFocusIndex = Math.max(0, Math.min(index, focusCards.length - 1));
+        currentFocusIndex = Math.max(0, Math.min(index, focusDots.length - 1));
 
         focusDots.forEach(dot => dot.classList.remove("active"));
 
