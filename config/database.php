@@ -14,7 +14,7 @@ if ($isLocal) {
     $pass = 'root';
 } else {
     $host = 'localhost';
-    $dbname = 'forma';
+    $dbname = 'u736192581_forma';
     $user = 'u736192581_ivanmontano87';
     $pass = 'Sanmontano2020';
 }
