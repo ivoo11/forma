@@ -1421,7 +1421,7 @@ body {
 
 .article-hero-label h1 {
     font-family: "Anton", sans-serif;
-    font-size: clamp(6rem, 12vw, 10rem);
+    font-size: clamp(6rem, 12vw, 9rem);
     line-height: .82;
     font-weight: 400;
     color: #fff;
