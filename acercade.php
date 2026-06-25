@@ -180,8 +180,7 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
             </div>
 
             <p>
-                Las disciplinas no son compartimentos separados.
-                Sino que son parte de una misma conversación.
+                Las disciplinas son parte de una misma conversación.
             </p>
 
         </div>
