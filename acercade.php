@@ -104,13 +104,12 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
         <span>ACERCA DE FORMA</span>
 
         <h1>
-            No nacimos para cubrir la actualidad.
-            Nacimos para entenderla.
+            La realidad cambia todos los días.
+            Las ideas cambian esa realidad.
         </h1>
 
         <p>
-            Un espacio editorial para explorar las relaciones entre comunicación,
-            diseño, medios, cultura digital y política.
+            Un espacio editorial para explorar las relaciones del diseño con la comunicación, los medios, la cultura digital y la política.
         </p>
 
     </div>
@@ -181,8 +180,8 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
             </div>
 
             <p>
-                No entendemos estas disciplinas como compartimentos separados.
-                Las entendemos como parte de una misma conversación.
+                Las disciplinas no son compartimentos separados.
+                Sino que son parte de una misma conversación.
             </p>
 
         </div>
@@ -208,9 +207,9 @@ $pageImage = $baseUrl . '/assets/img/og.jpg';
     <section class="about-closing">
         <div class="editorial-container">
 
-            <h2>FORMA no busca tener la última palabra.</h2>
+            <h2>FORMA busca generar conversación.</h2>
 
-            <h3>Busca generar mejores conversaciones.</h3>
+            <h3>Y dar diferentes miradas profesionales.</h3>
 
             <a href="/archivo" class="about-link">
                 Explorar el archivo →
