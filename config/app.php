@@ -1,3 +1,3 @@
 <?php
 
-define('MAINTENANCE_MODE', false);
+define('MAINTENANCE_MODE', true);
