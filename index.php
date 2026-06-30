@@ -1,5 +1,12 @@
 <?php
 
+require_once __DIR__ . '/config/app.php';
+
+if (MAINTENANCE_MODE) {
+    require __DIR__ . '/maintenance.php';
+    exit;
+}
+
 require_once __DIR__ . '/config/database.php';
 require_once __DIR__ . '/includes/editorial.php';
 

@@ -1,0 +1,194 @@
+<?php
+http_response_code(200);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="description" content="Diseño, comunicación, medios y cultura digital. Próximamente.">
+
+    <meta property="og:title" content="FOЯMA">
+    <meta property="og:description" content="Las ideas necesitan espacio.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://somosforma.com.ar/assets/img/og.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://somosforma.com.ar/assets/img/og.jpg">
+
+    <title>FOЯMA | Próximamente</title>
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png?v=20260609" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg?v=20260609">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico?v=20260609">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png?v=20260609">
+    <meta name="apple-mobile-web-app-title" content="Forma">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest?v=20260609">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden;
+            background: #050505;
+            color: #fff;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            user-select: none;
+        }
+
+        .construction {
+            position: relative;
+            min-height: 100vh;
+            padding: 56px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #050505;
+        }
+
+        .construction-bg {
+            position: absolute;
+            width: min(1200px, 180vw);
+            opacity: .045;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .construction-bg img {
+            width: 100%;
+            display: block;
+        }
+
+        .construction-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 980px;
+            animation: enter .9s ease forwards;
+        }
+
+        .construction-logo {
+            width: clamp(150px, 18vw, 250px);
+            margin-bottom: 70px;
+        }
+
+        .construction-title {
+            font-family: "Anton", sans-serif;
+            font-size: clamp(4.4rem, 12vw, 11rem);
+            line-height: .86;
+            font-weight: 400;
+            letter-spacing: -.02em;
+            margin-bottom: 42px;
+        }
+
+        .construction-title span { display: block; }
+
+        .construction-text {
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            line-height: 1.45;
+            font-weight: 700;
+            color: rgba(255,255,255,.74);
+            margin-bottom: 18px;
+        }
+
+        .construction-tagline {
+            font-size: clamp(.95rem, 1.5vw, 1.1rem);
+            line-height: 1.5;
+            font-weight: 400;
+            color: rgba(255,255,255,.52);
+            margin-bottom: 34px;
+        }
+
+        .construction-soon {
+            display: inline-block;
+            font-size: .85rem;
+            font-weight: 900;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: #6a66ff;
+        }
+
+        .construction-title span:last-child::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: .8em;
+            background: #6a66ff;
+            margin-left: 12px;
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        @keyframes enter {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 767px) {
+            .construction {
+                padding: 42px 22px;
+                align-items: center;
+            }
+
+            .construction-logo {
+                width: 150px;
+                margin-bottom: 58px;
+            }
+
+            .construction-title {
+                font-size: clamp(4rem, 21vw, 6rem);
+                margin-bottom: 36px;
+            }
+
+            .construction-text { font-size: 1.05rem; }
+
+            .construction-tagline {
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="construction">
+        <div class="construction-bg" aria-hidden="true">
+            <img src="/assets/img/logo2.png" alt="">
+        </div>
+
+        <section class="construction-content">
+            <img src="/assets/img/logo2.png" alt="FOЯMA" class="construction-logo">
+
+            <h1 class="construction-title">
+                <span>LAS IDEAS</span>
+                <span>NECESITAN</span>
+                <span>ESPACIO.</span>
+            </h1>
+
+            <p class="construction-text">
+                Estamos construyendo uno.
+            </p>
+
+            <p class="construction-tagline">
+                Diseño, comunicación, medios y cultura digital.
+            </p>
+
+            <span class="construction-soon">
+                Próximamente
+            </span>
+        </section>
+    </main>
+</body>
+</html>
